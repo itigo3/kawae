@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>かわえの自己紹介</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      background: linear-gradient(to bottom, #ffeef5, #fff);
+      color: #555;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: #ffd6e7;
+      color: #fff;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #ffffffcc;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      border-left: 6px solid #ff9ecb;
+      padding-left: 10px;
+      color: #ff7ab8;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    .flower {
+      position: fixed;
+      top: -50px;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>かわえのページ</h1>
+    <p>春のやさしい風にのせて、こんにちは🌸</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>自己紹介</h2>
+      <p>はじめまして、かわえです！よろしくお願いします。</p>
+    </section>
+
+    <section>
+      <h2>好きなもの</h2>
+      <ul>
+        <li>好きな食べ物はモツ鍋</li>
+        <li>好きなアーティストはhearts2hearts</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>趣味</h2>
+      <p>勉強すること♡</p>
+    </section>
+
+    <section>
+      <h2>ひとこと</h2>
+      <p>友達１００人作る！</p>
+    </section>
+  </div>
+
+  <footer>
+    © 2026 かわえ
+  </footer>
+
+  <script>
+    function createFlower() {
+      const flower = document.createElement('div');
+      flower.classList.add('flower');
+      flower.style.left = Math.random() * window.innerWidth + 'px';
+      flower.style.animationDuration = (3 + Math.random() * 5) + 's';
+      document.body.appendChild(flower);
+
+      setTimeout(() => {
+        flower.remove();
+      }, 8000);
+    }
+
+    setInterval(createFlower, 300);
+  </script>
+
+</body>
+</html>
+
